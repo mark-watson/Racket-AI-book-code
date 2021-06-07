@@ -1,0 +1,946 @@
+Barbados
+Hudson
+Japan
+Vientiane
+Pago Pago
+Michigan
+Malaysia
+Texas
+Larami
+P'yongyang
+Samoa
+Praia
+Buenos Aires
+Anguilla
+Bethel
+Botswana
+Schenectady
+Northern Mariana Islands
+Kiribati
+Bridgetown
+Basseterre
+Evanston
+North Little Rock
+Somalia
+Gaza Strip
+Tempe
+Rio Rancho
+Brooklyn Park
+Layton
+Qatar
+Bishkek
+Baker Island
+Stamford
+Majuro
+Kuala Lumpur
+Warner Robins
+Midwest City
+Florissant
+Kansas City
+Fairmont
+Biloxi
+Marietta
+Franklin
+Flagstaff
+North Dakota
+Westminster
+Delaware
+Haiti
+Providence
+Bend
+United States
+Burkina Faso
+Roanoke
+West Valley City
+Havre
+Rogers
+Rockford
+Guam
+Kenner
+Butte
+Conakry
+Hanoi
+Wahpeton
+Quito
+Hollywood
+Bosnia
+Herzegovina
+Liberia
+Washington
+Saint Joseph
+Nicaragua
+Dover
+Fort Wayne
+New Caledonia
+Moore
+Warwick
+British Indian Ocean Territory
+Glorioso Islands
+Fort Collins
+Egypt
+New Haven
+Norfolk
+Jamaica
+Paramaribo
+Douglas
+Kingston
+Valletta
+Wichita
+New Castle
+Iraq
+Gibraltar
+Zambia
+Iran
+Sioux City
+Ohio
+Portland
+Rochester
+Canberra
+Peru
+Enid
+Montgomery
+West Island
+Nairobi
+Florida
+New Zealand
+Kodiak
+Clarksville
+Gadsden
+Mesa
+Charlotte
+Gary
+Corvallis
+British Virgin Islands
+Micronesia
+Bamako
+Washington
+Portugal
+Turkmenistan
+Broken Arrow
+Cambodia
+Norman
+Congo
+Albuquerque
+Philadelphia
+Spokane
+Middletown
+Hilo
+Senegal
+Brunswick
+Angola
+Aurora
+Damascus
+Baton Rouge
+Rapid City
+Minneapolis
+Greenville
+Adamstown
+Suriname
+Ecuador
+Sofia
+Rockville
+Lawrence
+Columbia
+Saint Louis
+Federal Way
+French Polynesia
+North Charleston
+Lebanon
+Belarus
+Lorain
+Portsmouth
+Auburn
+Ukraine
+Aruba
+Kiev
+Erie
+Suva
+Eau Claire
+Livonia
+Quincy
+Vaduz
+Frederick
+Ljubljana
+Cyprus
+Wisconsin
+Biddeford
+Mogadishu
+Ann Arbor
+Provo
+Abu Dhabi
+Fremont
+Bahrain
+Sweden
+Dominican Republic
+Maldives
+Oklahoma City
+Madrid
+Guinea-Bissau
+Conway
+Saint Helier
+Copenhagen
+Niamey
+Indianapolis
+Port Moresby
+Appleton
+Vatican City
+Kingman Reef
+Youngstown
+Grenada
+Tuvalu
+Albany
+Iowa City
+Bangor
+Sandy
+Durham
+Djibouti
+United Arab Emirates
+Milford
+Moldova
+Italy
+Syracuse
+Gambia
+Hattiesburg
+Buffalo
+West Fargo
+New York
+High Point
+Kingstown
+Saint-Denis
+Ulaanbaatar
+Jerusalem
+Salisbury
+College Park
+Scranton
+Overland Park
+Bozeman
+Barrow
+Vienna
+Road Town
+Brookings
+Sierra Leone
+Anaheim
+Los Angeles
+Hot Springs
+Nevada
+Phoenix
+Martinique
+Dhaka
+Beijing
+Sri Lanka
+Memphis
+Atlanta
+Grand Forks
+Montana
+Wasilla
+Maryland
+Pembroke Pines
+Oman
+Pawtucket
+Armenia
+Denver
+Iceland
+Gillette
+Sanford
+Belgium
+Lancaster
+Monrovia
+Edison Township
+New Hampshire
+Banjul
+Nashville
+Doha
+Algeria
+Marshall Islands
+Kalispell
+Switzerland
+Mauritania
+Manchester
+Oranjestad
+Charleston
+Ouagadougou
+Bossier City
+Beaverton
+Zimbabwe
+Carlsbad
+New Delhi
+West Hartford
+Jordan
+Jersey
+Louisville
+Rome
+Bucharest
+Saint Kitts
+Bhutan
+San Diego
+Elizabeth
+Georgia
+Greensboro
+Antarctica
+Jonesboro
+Honiara
+Netherlands
+Israel
+Dushanbe
+Chandler
+Decatur
+Taylorsville
+Cincinnati
+Colorado
+Tucson
+Tupelo
+Huron
+Libreville
+Manhattan
+Pakistan
+Winston-Salem
+Thailand
+Bandar Seri Begawan
+Macedonia
+Honduras
+Bloomington
+Newark
+Europa Island
+Reading
+Lusaka
+Hillsboro
+Cedar Rapids
+Tuscaloosa
+San Jose
+Phnom Penh
+Taiwan
+Nicosia
+Canada
+Grand Rapids
+Minsk
+Lome
+Bangladesh
+Hong Kong
+New Britain
+Saint John's
+Kinshasa
+South Dakota
+Prague
+Mali
+Bujumbura
+Cambridge
+Little Rock
+Moscow
+Augusta
+Male
+La Paz
+none
+South Bend
+Aberdeen
+Ashgabat
+Kansas
+Omaha
+Pittsburgh
+Comoros
+Annapolis
+Sanaa
+Solomon Islands
+Kampala
+Lexington
+Westland
+Nepal
+Rock Hill
+Chicago
+Orlando
+Thornton
+New Jersey
+Kathmandu
+Huntington
+Macau
+Cedar Falls
+Arvada
+Luxembourg
+Guernsey
+Canton
+Shawnee
+Springfield
+Davenport
+Nassau
+Chisinau
+Bowling Green
+Tirana
+Louisiana
+Hoover
+Panama
+Oslo
+Mozambique
+Sterling Heights
+Benin
+Saint Petersburg
+Argentina
+Lowell
+N'Djamena
+Dublin
+Saint Lucia
+South Portland
+Ghana
+Woonsocket
+Sao Tome
+El Paso
+Lansing
+Mandan
+Kazakhstan
+Las Cruces
+Eugene
+West Jordan
+Tunisia
+Hastings
+Boston
+Reunion
+Anchorage
+Richmond
+Ketchikan
+Johnson City
+Parkersburg
+Tampa
+Las Vegas
+Mount Pleasant
+Hungary
+Duluth
+Dickinson
+Cuba
+Santiago
+Toledo
+West Warwick
+Victoria
+Alaska
+Detroit
+Thimphu
+Smyrna
+Mexico
+Vanuatu
+Jakarta
+Des Moines
+Albania
+Kyrgyzstan
+Mitchell
+Arkansas
+Kentucky
+Castries
+Guinea
+Korea
+Bolivia
+Gaborone
+Meridian
+South Africa
+Maine
+Cook Islands
+Tennessee
+Cayenne
+Cayman Islands
+Paraguay
+Independence
+Mayotte
+Alofi
+Dearborn
+Muscat
+Saint Peter Port
+Henderson
+Turkey
+Germany
+Hamilton
+Lincoln
+Islamabad
+Burundi
+Minot
+Houston
+Christmas Island
+Yuma
+Concord
+Pennsylvania
+Oakland
+Connecticut
+Georgetown
+Midway Islands
+Austria
+Mount Vernon
+Salt Lake City
+Cary
+Port-au-Prince
+Finland
+Gabon
+Clovis
+Elko
+Spratly Islands
+Farmington
+Cumberland
+Hawaii
+Bogota
+Jersey City
+Basse-Terre
+Malta
+French Guiana
+Falkland Islands
+Czech Republic
+Croatia
+Lesotho
+Scottsdale
+Afghanistan
+Western Sahara
+Atlantic Ocean
+Libya
+New Mexico
+Australia
+Palau
+Monroe
+El Salvador
+Zagreb
+Hartford
+West Virginia
+San Francisco
+Cameroon
+Green Bay
+Vancouver
+Chad
+Pretoria
+Denmark
+Gilbert
+Avarua
+Bassas da India
+Lewiston
+Latvia
+Hagerstown
+Great Falls
+Upper Darby Twp
+Mililani
+Scarborough
+Laos
+Hilton Head Island
+Juan de Nova Island
+Jackson
+Utah
+Singapore
+Alamogordo
+Danbury
+Virginia
+Indiana
+Wilmington
+New Rochelle
+Eritrea
+Frankfort
+Milwaukee
+Tehran
+Kenai
+Greenwich
+Lee's Summit
+Mesquite
+Venezuela
+St. George
+London
+Lilongwe
+Managua
+Tallahassee
+Clipperton Island
+Vietnam
+Dover Township
+Knoxville
+Palikir
+Huntsville
+Dominica
+Brockton
+Khartoum
+Alabama
+Colombia
+Equatorial Guinea
+Coral Sea Islands
+Fargo
+West Bank
+Algiers
+Anderson
+Bridgeport
+Reno
+Navassa Island
+Morocco
+Jacksonville
+Sacramento
+Tarawa
+Johnston Atoll
+Berlin
+San Juan
+Spartanburg
+Plymouth
+Pine Bluff
+Yemen
+Kenya
+Norwalk
+Russia
+Miles City
+Windhoek
+Oklahoma
+Tunis
+Skopje
+Colorado Springs
+Papua New Guinea
+Sarajevo
+Missouri
+Trenton
+Bermuda
+Congo
+Glendale
+San Marino
+Bissau
+Antigua
+Barbuda
+Chesapeake
+Guadeloupe
+Dakar
+Athens
+Hampton
+Netherlands Antilles
+Tromelin Island
+Asuncion
+Parma
+San Salvador
+Manama
+Brazil
+The Valley
+Havana
+Tanzania
+Miami
+Owensboro
+Salem
+Columbus
+Nuku'alofa
+Billings
+Waterbury
+Minnesota
+Hobbs
+Florence
+Bouvet Island
+Papeete
+Roseau
+Virginia Beach
+Saint Charles
+Luanda
+Amsterdam
+West Allis
+Slovenia
+Bellevue
+Oshkosh
+Anaconda
+Guatemala
+Springdale
+Boulder
+Alexandria
+Carson City
+Yerevan
+Fort Lauderdale
+Waukesha
+Philippines
+Sioux Falls
+Clarksburg
+Seaford
+New Orleans
+Nigeria
+Arlington
+Flint
+Grand Island
+Fallon
+Racine
+Wyoming
+Vermillion
+Wheeling
+none
+Montserrat
+India
+Belize
+Kearney
+Howland Island
+Andorra
+East Providence
+Namibia
+Saint Pierre
+Miquelon
+Guyana
+Nebraska
+Wellington
+Santa Ana
+Swaziland
+Evansville
+Tulsa
+Dubuque
+Yonkers
+Gulfport
+Fresno
+France
+Southern Ocean
+Worcester
+Yakima
+Edmond
+Arctic Ocean
+Jamestown
+Akron
+Madagascar
+Cody
+Greece
+Fort Worth
+Cape Verde
+Central African Republic
+Illinois
+Ethiopia
+Lawton
+Saipan
+Yaounde
+Bellingham
+Faroe Islands
+Seychelles
+Terre Haute
+Tokyo
+Slovakia
+Rabat
+Trinidad
+Tobago
+Belgrade
+Dallas
+Montevideo
+Norway
+Niue
+Malabo
+Watertown
+Bismarck
+San Antonio
+North Las Vegas
+Lima
+Plymouth
+Tegucigalpa
+Fall River
+Tallinn
+Port-of-Spain
+Longyearbyen
+Covington
+Tonga
+Gaithersburg
+Kuwait
+Svalbard
+Beirut
+Maseru
+Uruguay
+Naperville
+Kingsport
+Green River
+Greenland
+Liechtenstein
+Vermont
+Norfolk Island
+Saint-Pierre
+Lisbon
+Bulgaria
+Waukegan
+Paris
+California
+Brazzaville
+Coventry
+Pueblo
+Fayetteville
+Antananarivo
+Baghdad
+Ogden
+Amman
+Budapest
+Manila
+Lake Charles
+Waterloo
+China
+Torshavn
+Lakewood
+Chattanooga
+Murfreesboro
+Addis Ababa
+Topeka
+Stockholm
+Saint Helena
+Tacoma
+Sitka
+Puerto Rico
+Medford
+Reykjavik
+Sumter
+Jarvis Island
+Helsinki
+Costa Rica
+Birmingham
+Ottawa
+Bethlehem
+Brasilia
+Macon
+Helena
+The Settlement
+Cheyenne
+Togo
+Taipei
+Brunei
+Utica
+Paterson
+Fort Smith
+Idaho
+Brussels
+South Carolina
+Saint George's
+T'bilisi
+Asheville
+Burma
+Woodbridge Township
+Stanley
+Pitcairn Islands
+Paracel Islands
+Pacific Ocean
+Harare
+Weirton
+Yankton
+Saudi Arabia
+Garland
+Nauru
+Ames
+Riverton
+Saint Peters
+Ankara
+Bowie
+Uzbekistan
+Freetown
+Plano
+Mobile
+Williston
+Indonesia
+Charlotte Amalie
+Port Louis
+Stillwater
+Chile
+Dayton
+Missoula
+United Kingdom
+Salina
+Fort-de-France
+Korea
+Muncie
+Santa Fe
+Cleveland
+Saint Vincent
+Grenadines
+Vicksburg
+Sudan
+Sheridan
+Jeffersontown
+Peoria
+Martinsburg
+Saint Paul
+Wake Island
+Belmopan
+Baltimore
+Uganda
+Newport News
+Riyadh
+Bangkok
+Tajikistan
+Sao Tome
+Bern
+World
+New Bedford
+LaFayette
+Moroni
+Syria
+Hammond
+Camden
+Orem
+Allentown
+Accra
+Council Bluffs
+Palmyra Atoll
+Lynn
+Coon Rapids
+Fiji
+Santo Domingo
+Bratislava
+Nouakchott
+Malawi
+Londonderry
+Derry
+Burnsville
+Fairbanks
+Mongolia
+Funafuti
+Warsaw
+North Carolina
+Azerbaijan
+Southaven
+Caracas
+Maputo
+North Platte
+Cote d'Ivoire
+Honolulu
+Kailua
+Rhode Island
+Boulder City
+Ireland
+Seoul
+Elgin
+Gresham
+Arizona
+George Town
+Bahamas
+Riga
+Massachusetts
+Corpus Christi
+Romania
+Savannah
+Oregon
+Rock Springs
+Dothan
+Beckley
+American Samoa
+Tripoli
+Madison
+Iowa
+North Providence
+Tokelau
+Juneau
+Austin
+Seattle
+Hialeah
+Kabul
+Niger
+Noumea
+Shreveport
+Mamoutzou
+Everett
+Olathe
+Andorra la Vella
+Indian Ocean
+Bangui
+Joliet
+Cranston
+Raleigh
+Morgantown
+Kent
+Jan Mayen
+Spain
+Mauritius
+Port-Vila
+Hutchinson
+Mississippi
+Lithuania
+Rwanda
+Kigali
+Estonia
+Merrimack
+Sparks
+Virgin Islands
+Vilnius
+Long Beach
+Willemstad
+Cairo
+Poland
+Kenosha
+Apia
+Monaco
+Casper
+Roswell
+Eagan
+Hopkinsville
+Yugoslavia
+
+
