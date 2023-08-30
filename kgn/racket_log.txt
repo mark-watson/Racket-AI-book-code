@@ -1,0 +1,8 @@
+loading lex-hash: starting
+loading lex-hash: ending
+data: path to data
+/Applications/Racket v8.8/DrRacket.app/Contents/MacOS/DrRacket: path of run file
+loading lex-hash: starting
+loading lex-hash: ending
+data: path to data
+/Users/markwatson/.emacs.d/straight/build/racket-mode/racket/main.rkt: path of run file
