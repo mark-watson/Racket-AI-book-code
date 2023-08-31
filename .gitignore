@@ -4,6 +4,8 @@
 
 *.rkt~
 
+racket_log.txt
+
 *.scm~
 *.scm#*
 .#*.scm
