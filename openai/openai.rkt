@@ -48,7 +48,7 @@
          (auth (lambda (uri headers params)
                  (values
                   (hash-set* headers
-                             'authorization "Bearer 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"
+                             'authorization (string-join (list "Bearer " (getenv "OPENAI_API_KEY")))
                              'content-type "application/json") params)))
          (p
           (post "https://api.openai.com/v1/chat/completions" ;; "https://api.openai.com/v1/engines/davinci/completions"
