@@ -1,12 +1,32 @@
 #lang racket
 
-(require html net/url xml xml/path)
+(require net/http-easy)
+(require html-parsing)
+(require net/url xml xml/path)
+(require racket/pretty)
 
-(define (read-html-as-xexprs in)
-  (caddr (xml->xexpr (element #f #f 'root '() (read-html-as-xml in)))))
+(define res-stream
+  (get "https://markwatson.com" #:stream? #t))
 
-(define reddit (string->url "http://markwatson.com"))
+(define lst
+  (html->xexp (response-output res-stream)))
 
-(define xe (call/input-url reddit get-pure-port read-html-as-xexprs))
+(response-close! res-stream)
 
-(se-path* "//text()" xe)
+(displayln "\nParagraph text:\n")
+
+(define lst-p (se-path*/list '(p) lst))
+(displayln "\nlst-p:\n")
+(pretty-print lst-p)
+
+(define lst-strings
+  (filter
+   (lambda (s) (string? s))
+   lst-p))
+
+(displayln "\nlst-strings:\n")
+(pretty-print lst-strings)
+
+(define one-string
+  (string-normalize-spaces
+   (string-join lst-strings "\n")))

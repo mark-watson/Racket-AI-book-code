@@ -13,10 +13,10 @@
 
 (response-close! res-stream)
 
-(displayln "\nParagraph text:\n")
+;;(define lst-li (take (se-path*/list '(li) lst) 20))
+;;(displayln "\nLI text:\n")
+;;(pretty-print lst-li)
 
-(pretty-print (take (se-path*/list '(p) lst) 8))
+(define hrefs (se-path*/list '(href) lst))
 
-(displayln "\nLI text:\n")
-
-(pretty-print (take (se-path*/list '(li) lst) 8))
+(pretty-print hrefs)
