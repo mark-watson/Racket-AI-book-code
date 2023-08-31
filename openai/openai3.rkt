@@ -4,7 +4,8 @@
 (require racket/set)
 
 (let* ((prompt "Mary is 30 and Harry is 25. Who is older?")
-       (prompt-data (string-join (list "{\"prompt\": \"" prompt "\"}")))
+       (prompt-data (string-join (list "{\"prompt\": \"" prompt "\" ,\"max_tokens\": 120}")))
+       (temp0 (displayln prompt-data))
        (auth (lambda (uri headers params)
                  (values
                   (hash-set* headers
