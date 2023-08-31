@@ -8,10 +8,10 @@
 (hash-set! h2 "snake" '("smooth" 4))
 
 ;; make-hash also accepts a second argument that is a list of pairs:
-(define h3 (make-hash '(("dog" '("friendly" 5)) ("cat" '("not friendly" 2)))))
+(define h3 (make-hash '(("dog" ("friendly" 5)) ("cat" ("not friendly" 2)))))
 (hash-set! h3 "snake" '("smooth" 4))
 (hash-set! h3 "cat" '("sometimes likeable" 3)) ;; overwrite key value
 
 ;; for can be used with hash tables:
 
-(for ([(k v) h3]) (println '("key:" k "value:" v)))
+(for ([(k v) h3]) (println (list "key:" k "value:" v)))
