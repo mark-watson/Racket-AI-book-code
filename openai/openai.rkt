@@ -37,7 +37,7 @@
 (define (completion prompt)
   (question
    (string-append
-    "Continue writieng from the following text: "
+    "Continue writing from the following text: "
     prompt)))
 
 
