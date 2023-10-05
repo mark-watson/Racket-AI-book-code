@@ -1,8 +1,8 @@
 ide:
-	open kgn.rkt dev.rkt dialog-utils.rkt main.rkt sparql-utils.rkt names.rkt utils.rkt
+	open kgn.rkt dev.rkt dialog-utils.rkt main.rkt sparql-utils.rkt
 
 emacs:
-	Emacs kgn.rkt dev.rkt dialog-utils.rkt main.rkt sparql-utils.rkt names.rkt utils.rkt
+	Emacs kgn.rkt dev.rkt dialog-utils.rkt main.rkt sparql-utils.rkt
 #	ae kgn.rkt dev.rkt dialog-utils.rkt main.rkt sparql-utils.rkt names.rkt utils.rkt
 
 clean:

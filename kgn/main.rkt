@@ -1,7 +1,7 @@
 #lang racket
 
 (require racket/pretty)
-(require "names.rkt")
+(require "nlp")
 
 (provide get-person-results)
 (provide ui-query-helper)
