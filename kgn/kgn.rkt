@@ -6,13 +6,19 @@
 (require racket/pretty)
 (require scribble/text/wrap)
 
-(require "utils.rkt")
+;; Sample queries:
+;;   who is Bill Gates
+;;   where is San Francisco?
+;; (only who/where queries are currently handled)
+
+;;(require "utils.rkt")
+(require nlp)
 (require "main.rkt")
 (require "dialog-utils.rkt")
 
 (display "\nCurrent path = ") (display (find-system-path 'run-file)) (display "\n")
-(my-log-info (path->string (path-to-data)) "path to data")
-(my-log-info (find-system-path 'run-file) "path of run file")
+;;(my-log-info (path->string (path-to-data)) "path to data")
+;;(my-log-info (find-system-path 'run-file) "path of run file")
 
 ;; NOTE: data subdirectory needs to be in kgn.app/Contents/Resources for code signing to work
 
