@@ -4,6 +4,8 @@
 (require racket/set)
 (require pprint)
 
+(provide question completion)
+
 (define (question prompt max-tokens)
   (let* ((prompt-data
           (string-join
