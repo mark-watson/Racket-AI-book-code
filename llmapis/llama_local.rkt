@@ -4,14 +4,14 @@
 (require racket/set)
 (require pprint)
 
-(define (question prompt)
+(define (helper prompt)
   (let* ((prompt-data
           (string-join
            (list
             (string-append
              "{\"prompt\": \""
              prompt
-             "\", \"n_predict\": 256, \"top_k\": 2}"))))
+             "\", \"n_predict\": 256, \"top_k\": 1}"))))
          (ignore (displayln prompt-data))
          (p
           (post
@@ -20,12 +20,15 @@
          (r (response-json p)))
     (hash-ref r 'content)))
 
+(define (question question)
+  (helper (string-append "Answer: " question)))
+
 (define (completion prompt)
-  (question
+  (helper
    (string-append
     "Continue writing from the following text: "
     prompt)))
 
 
-;; (displayln (question "Answer the question: Mary is 30 and Harry is 25. Who is older?"))
-;; (displayln (completion "Frank bought a new sports car. Frank drove"))
+(displayln (question "Mary is 30 and Harry is 25. Who is older?"))
+(displayln (completion "Frank bought a new sports car. Frank drove"))
