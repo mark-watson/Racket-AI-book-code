@@ -7,16 +7,11 @@
 
 (define db-file "test.db")
 (println db-file)
-(define db (sqlite3-connect #:database db-file #:mode 'create))
 
 (query-exec db
-   "create temporary table the_numbers (n integer, d varchar(20))")
-(query-exec db
-    "insert into the_numbers values (0, 'nothing')")
-(query-exec db
-    "insert into the_numbers values (1, 'the loneliest number')")
+     "create  table person (name varchar(30), age integer, email varchar(20))")
 
-(define results
-  (query db "select * from the_numbers"))
+(query-exec db
+     "insert into person values ('Mary', 34, 'mary@test.com')")
 
-(println results)
+(println (query-rows db "select * from person"))
