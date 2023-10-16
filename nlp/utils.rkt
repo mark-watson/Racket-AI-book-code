@@ -13,9 +13,6 @@
 (define count-substring 
   (compose length regexp-match*))
 
-(define (string-count-substrings substr str)
-  (length (regexp-match* substr str)))
-
 #|
-(display (string-count-substrings "bb" "aa bb cc bb dd"))
+(display (count-substring "bb" "aa bb cc bb dd"))
 |#

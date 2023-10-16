@@ -207,7 +207,7 @@
               (set! ret (cons (list i (+ i 1)) ret))
               #f)
           #f))
-    ;; TBD: calculate importance rating based on number of occurences of name in text: can use (string-count-substrings..) defined in utils.rkt
+    ;; TBD: calculate importance rating based on number of occurences of name in text: can use (count-substring..) defined in utils.rkt
     (set! ret2
           (map (lambda (index-pair)
                  (string-join (vector->list (vector-copy  word-vector (car index-pair) (cadr index-pair))) " "))
