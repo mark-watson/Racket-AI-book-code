@@ -19,8 +19,7 @@
 
 
 (define (get-place-results place-name-string)
-  (let ((place-uri (sparql-dbpedia-person-uri place-name-string)))  ;; FIX TBD place handling
-    ;; TBD: check for valid result here...
+  (let ((place-uri (sparql-dbpedia-place-uri place-name-string)))
     (let* ((hash-data (sparql-query->hash place-uri)))
       (list
        place-uri
