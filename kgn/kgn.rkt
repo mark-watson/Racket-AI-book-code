@@ -11,16 +11,19 @@
 ;;   where is San Francisco?
 ;; (only who/where queries are currently handled)
 
-;;(require "utils.rkt")
 (require nlp)
 (require "main.rkt")
 (require "dialog-utils.rkt")
+(require racket/runtime-path)
 
-(display "\nCurrent path = ") (display (find-system-path 'run-file)) (display "\n")
-;;(my-log-info (path->string (path-to-data)) "path to data")
-;;(my-log-info (find-system-path 'run-file) "path of run file")
+(provide path-to-data)
 
-;; NOTE: data subdirectory needs to be in kgn.app/Contents/Resources for code signing to work
+(define-runtime-path my-data-path "data")
+
+(define (path-to-data) my-data-path)
+
+(define count-substring 
+  (compose length regexp-match*))
 
 (define (short-string s)
   (if (< (string-length s) 75)

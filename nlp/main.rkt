@@ -1,6 +1,5 @@
 #lang racket/base
 
-(require "utils.rkt")
 (require "fasttag.rkt")
 (require "names.rkt")
 

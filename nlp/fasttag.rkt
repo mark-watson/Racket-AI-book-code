@@ -2,7 +2,7 @@
 
 (require srfi/13) ; the string SRFI
 
-(require "utils.rkt")
+;;(require "utils.rkt")
 
 (provide parts-of-speech)
 
@@ -19,7 +19,7 @@
 (define lex-hash
   (let ((hash (make-hash)))
     (with-input-from-file
-        (string-append (path->string (path-to-data)) "/tag.dat")
+        "data/tag.dat"
       (lambda ()
         (let loop ()
           (let ((p (read)))
@@ -130,9 +130,9 @@
     (list->vector (reverse ret))))
 
 
-(display (parts-of-speech (list->vector '("the" "cat" "ran"))))
-(display (parts-of-speech (list->vector '("banking" "in" "Europe" "is" "a" "good" "business" "and" "a" "liberty"))))
+;;(display (parts-of-speech (list->vector '("the" "cat" "ran"))))
+;;(display (parts-of-speech (list->vector '("banking" "in" "Europe" "is" "a" "good" "business" "and" "a" "liberty"))))
 
 
- (display (parts-of-speech
-           '#("President" "Bush" "went" "to" "San" "Diego" "to" "meet" "Ms" "." "Jones" "and" "Gen" "." "Pervez" "Musharraf" ".")))
+;; (display (parts-of-speech
+;;           '#("President" "Bush" "went" "to" "San" "Diego" "to" "meet" "Ms" "." "Jones" "and" "Gen" "." "Pervez" "Musharraf" ".")))
