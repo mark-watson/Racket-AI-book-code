@@ -8,4 +8,4 @@
 (provide question-anthropic completion-anthropic)
 (provide question-llama-local completion-llama-local)
 (provide question-ollama-ai-local completion-ollama-ai-local)
-(provide question-openai completion-openai)
+(provide question-openai completion-openai embeddings-openai)
