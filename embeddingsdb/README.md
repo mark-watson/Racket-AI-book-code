@@ -1,4 +1,6 @@
-# install as a local package
+# WORK IN PROGRESS - IGNORE FOR NOW!!
+
+## install as a local package
 
     raco pkg remove
     raco pkg install --scope user

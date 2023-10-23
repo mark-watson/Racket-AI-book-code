@@ -82,10 +82,15 @@
   ;; ... implementation ...
   )
 
-;; Assuming a function to compute dot product
-(define (openai::dot-product emb1 emb2)
-  ;; ... implementation ...
-  )
+
+(define (dot-product a b) ;; dot product of two lists of floating point numbers
+  (displayln "dot-product")
+  (cond
+    [(or (null? a) (null? b)) 0]
+    [else
+     (+ (* (car a) (car b))
+        (dot-product-recursive (cdr a) (cdr b)))]))
+
 
 ;; Assuming a function to answer questions
 (define (openai:answer-question query-with-context n)
