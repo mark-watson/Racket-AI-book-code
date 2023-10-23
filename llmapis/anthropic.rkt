@@ -4,9 +4,9 @@
 (require racket/set)
 (require pprint)
 
-(provide question completion)
+(provide question-anthropic completion-anthropic)
 
-(define (question prompt max-tokens)
+(define (question-anthropic prompt max-tokens)
   (let* ((prompt-data
           (string-join
            (list
@@ -33,13 +33,13 @@
          (r (response-json p)))
     (string-trim (hash-ref r 'completion))))
 
-(define (completion prompt max-tokens)
-  (question
+(define (completion-anthropic prompt max-tokens)
+  (question-anthropic
    (string-append
     "Continue writing from the following text: "
     prompt)
    max-tokens))
 
 
-;; (displayln (question "Mary is 30 and Harry is 25. Who is older?" 20))
-;; (displayln (completion "Frank bought a new sports car. Frank drove" 200))
+;; (displayln (question-anthropic "Mary is 30 and Harry is 25. Who is older?" 20))
+;; (displayln (completion-anthropic "Frank bought a new sports car. Frank drove" 200))

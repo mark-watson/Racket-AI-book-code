@@ -4,7 +4,9 @@
 (require racket/set)
 (require pprint)
 
-(define (question prompt)
+(provide question-openai completion-openai)
+
+(define (question-openai prompt)
   (let* ((prompt-data
           (string-join
            (list
@@ -34,12 +36,12 @@
      (hash-ref (first (hash-ref r 'choices)) 'message)
      'content)))
 
-(define (completion prompt)
-  (question
+(define (completion-openai prompt)
+  (question-openai
    (string-append
     "Continue writing from the following text: "
     prompt)))
 
 
-;; (displayln (question "Mary is 30 and Harry is 25. Who is older?"))
-;; (displayln (completion "Frank bought a new sports car. Frank drove"))
+;; (displayln (question-openai "Mary is 30 and Harry is 25. Who is older?"))
+;; (displayln (completion-openai "Frank bought a new sports car. Frank drove"))
