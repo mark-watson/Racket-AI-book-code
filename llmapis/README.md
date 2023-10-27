@@ -1,4 +1,6 @@
-# install as a local package
+# Using the OpenAI, Anthropic, Mistral, and Local Hugging Face Large Language Model APIs in Racket
+
+## install as a local package
 
     raco pkg remove
     raco pkg install --scope user
