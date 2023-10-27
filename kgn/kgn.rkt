@@ -6,6 +6,7 @@
 (require racket/pretty)
 (require scribble/text/wrap)
 
+
 ;; Sample queries:
 ;;   who is Bill Gates
 ;;   where is San Francisco?

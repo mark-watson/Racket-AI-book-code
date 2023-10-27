@@ -2,6 +2,7 @@
 
 (provide sparql-dbpedia-for-person)
 (provide sparql-dbpedia-person-uri)
+(provide sparql-dbpedia-place-uri)
 (provide sparql-query->hash)
 (provide json->listvals)
 (provide extract-name-uri-and-comment)
@@ -32,6 +33,16 @@
     SELECT DISTINCT ?personuri ?comment {
       ?personuri <http://xmlns.com/foaf/0.1/name> "@person-name"@"@"en .
       ?personuri <http://www.w3.org/2000/01/rdf-schema#comment>  ?comment .
+                  FILTER  (lang(?comment) = 'en') .
+}})
+
+
+(define (sparql-dbpedia-place-uri place-name)
+  ;; work in progress - not tested
+  @string-append{
+    SELECT DISTINCT ?placeuri ?comment {
+      ?placeuri <http://xmlns.com/foaf/0.1/name> "@place-name"@"@"en .
+      ?placeuri <http://www.w3.org/2000/01/rdf-schema#comment>  ?comment .
                   FILTER  (lang(?comment) = 'en') .
 }})
 
