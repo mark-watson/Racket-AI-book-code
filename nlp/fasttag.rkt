@@ -1,6 +1,7 @@
 #lang racket
 
 (require srfi/13) ; the string SRFI
+(require racket/runtime-path)
 
 ;;(require "utils.rkt")
 
@@ -15,11 +16,13 @@
 
 
 (display "loading lex-hash...")
-(log-info "loading lex-hash" "starting")
+
+(define-runtime-path my-data-path "data")
+
 (define lex-hash
   (let ((hash (make-hash)))
     (with-input-from-file
-        "data/tag.dat"
+        (string-append (path->string my-data-path) "/tag.dat")
       (lambda ()
         (let loop ()
           (let ((p (read)))

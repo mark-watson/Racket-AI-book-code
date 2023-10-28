@@ -1,9 +1,12 @@
 #lang racket
 
 (require "fasttag.rkt")
+(require racket/runtime-path)
 
 (provide find-human-names)
 (provide find-place-names)
+
+(define-runtime-path my-data-path "data")
 
 (define (process-one-word-per-line file-path func)
   (with-input-from-file file-path
@@ -14,17 +17,29 @@
 		  (if (eof-object? l) #f (loop)))))))
 
 (define *last-name-hash* (make-hash))
-(process-one-word-per-line "data/human_names/names.last"
-                           (lambda (x) (hash-set! *last-name-hash* x #t)))
+(process-one-word-per-line 
+  (string-append
+    (path->string my-data-path)
+    "/human_names/names.last")
+  (lambda (x) (hash-set! *last-name-hash* x #t)))
 (define *first-name-hash* (make-hash))
-(process-one-word-per-line "data/human_names/names.male"
-                           (lambda (x) (hash-set! *first-name-hash* x #t)))
-(process-one-word-per-line "data/human_names/names.female"
-                           (lambda (x) (hash-set! *first-name-hash* x #t)))
+(process-one-word-per-line
+  (string-append
+    (path->string my-data-path)
+    "/human_names/names.male")
+  (lambda (x) (hash-set! *first-name-hash* x #t)))
+(process-one-word-per-line
+  (string-append
+    (path->string my-data-path)
+    "/human_names/names.female")
+  (lambda (x) (hash-set! *first-name-hash* x #t)))
 
 (define *place-name-hash* (make-hash))
-(process-one-word-per-line "data/placenames.txt"
-                           (lambda (x) (hash-set!  *place-name-hash* x #t)))
+(process-one-word-per-line
+  (string-append
+    (path->string my-data-path)
+    "/placenames.txt")
+  (lambda (x) (hash-set!  *place-name-hash* x #t)))
 
 (display (hash-ref *last-name-hash* "Bartlow" #f))
 

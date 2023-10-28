@@ -1,8 +1,12 @@
 # install as a local package
 
-    raco pkg remove
     raco pkg install --scope user
 
-If I change the source code, run the following to update the linked (installed in place) package **nlp**:
+When you create a package with "--scope user" you are defining a link to the location of your Racket library source code. For example, after doing this install, look in the file:
 
-    raco make main.rkt
+    ~/Library/Racket/8.10/links.rktd
+
+On my system, I have the following list added:
+
+    ("nlp" (up up up #"GITHUB" #"Racket-AI-book-code" #"nlp"))
+
