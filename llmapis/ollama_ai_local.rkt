@@ -32,5 +32,5 @@
     prompt)))
 
 
-(displayln (question-ollama-ai-local "Mary is 30 and Harry is 25. Who is older and by how much?"))
-(displayln (completion-ollama-ai-local "Frank bought a new sports car. Frank drove"))
+;;(displayln (question-ollama-ai-local "Mary is 30 and Harry is 25. Who is older and by how much?"))
+;;(displayln (completion-ollama-ai-local "Frank bought a new sports car. Frank drove"))

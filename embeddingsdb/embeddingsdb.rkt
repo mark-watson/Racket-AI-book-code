@@ -1,14 +1,17 @@
 #lang racket
-(require db)
-(require openai)
 
-(define (write-floats-to-string lst)
-  (with-output-to-string
-    (lambda (out)
-      (fprintf out "( ")
-      (for ([i lst])
-        (fprintf out "~a " i))
-      (fprintf out " )"))))
+(require db)
+;;(require sqlite-table)
+(require llmapis)
+
+; Function to convert list of floats to string representation
+(define (floats->string floats)
+  (string-join (map number->string floats) " "))
+
+; Function to convert string representation back to list of floats
+(define (string->floats str)
+  (map string->number (string-split str)))
+
 
 (define (read-file infile)
   (with-input-from-file infile
@@ -42,8 +45,13 @@
         (embedding (read (open-input-string (list-ref row 2)))))
     (list id context embedding)))
 
-(define db (sqlite3-connect ":memory:"))  ; For in-memory database
+(define db (sqlite3-connect #:database "test.db" #:mode 'create #:use-place #t))
 
+(with-handlers ([exn:fail? (lambda (ex) (void))])
+  (query-exec
+   db
+   "CREATE TABLE documents (document_path TEXT, content TEXT, embedding TEXT);"))
+      
 ;; ... database setup, error handling, and queries ...
 
 (define (insert-document document-path content embedding)
@@ -51,7 +59,7 @@
   (query-exec
    db
    "INSERT INTO documents (document_path, content, embedding) VALUES (?, ?, ?);"
-   document-path content (write-floats-to-string embedding)))
+   document-path content (floats->string embedding)))
 
 (define (get-document-by-document-path document-path)
   (map decode-row
@@ -59,16 +67,21 @@
                     "SELECT * FROM documents WHERE document_path = ?;"
                     document-path)))
 
+(define (all-documents)
+  (map
+   decode-row
+   (query-exec
+    db
+    "SELECT * FROM documents;")))
+   
 ;; ... remaining database query functions ...
 
 (define (create-document fpath)
-  (let ((contents (break-into-chunks (read-file fpath) 200)))
+  (let ((contents (break-into-chunks (file->string fpath) 200)))
     (for-each
      (lambda (content)
-       (with-handlers ((exn? (lambda (c)
-                               (printf "Error: ~a~%" c))))
-         ;; Assuming openai::embeddings is a function that gets embeddings
-         (let ((embedding (openai::embeddings content)))
+       (with-handlers ([exn:fail? (lambda (ex) (void))])
+         (let ((embedding (embeddings-openai content)))
            (insert-document fpath content embedding))))
      contents)))
 
@@ -77,41 +90,30 @@
 (define (execute-to-list db query)
   (query-rows db query))
 
-;; Assuming a function to get document embeddings
-(define (openai::embeddings content)
-  ;; ... implementation ...
-  )
-
-
 (define (dot-product a b) ;; dot product of two lists of floating point numbers
   (displayln "dot-product")
   (cond
     [(or (null? a) (null? b)) 0]
     [else
      (+ (* (car a) (car b))
-        (dot-product-recursive (cdr a) (cdr b)))]))
+        (dot-product (cdr a) (cdr b)))]))
 
-
-;; Assuming a function to answer questions
-(define (openai:answer-question query-with-context n)
-  ;; ... implementation ...
-  )
 
 (define (semantic-match query custom-context [cutoff 0.7])
-  (let ((emb (openai::embeddings query))
+  (let ((emb (embeddings-openai query))
         (ret '()))
     (for-each
      (lambda (doc)
        (let* ((context (second doc)) ;; ignore fpath for now
               (embedding (third doc))
-              (score (openai::dot-product emb embedding)))
+              (score (dot-product emb embedding)))
          (when (> score cutoff)
            (set! ret (cons context ret)))))
-     (all-documents))  ;; Assuming all-documents is a function that fetches all documents
+     (all-documents))
     (printf "~%semantic-search: ret=~a~%" ret)
     (let* ((context (string-join (reverse ret) " . "))
            (query-with-context (string-join (list context custom-context "Question:" query) " ")))
-      (openai:answer-question query-with-context 40))))
+      (question-openai query-with-context 40))))
 
 (define (QA query [quiet #f])
   (let ((answer (semantic-match query "")))
@@ -143,8 +145,8 @@
 
 (define (test)
   "Test code for Semantic Document Search Using OpenAI GPT APIs and local vector database"
-  (create-document "data/sports.txt")
-  (create-document "data/chemistry.txt")
+  (create-document "/Users/markw/GITHUB/Racket-AI-book-code/embeddingsdb/data/sports.txt")
+  (create-document "/Users/markw/GITHUB/Racket-AI-book-code/embeddingsdb/data/chemistry.txt")
   (QA "What is the history of the science of chemistry?")
   (QA "What are the advantages of engaging in sports?"))
 

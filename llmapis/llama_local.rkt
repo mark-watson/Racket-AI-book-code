@@ -32,5 +32,5 @@
     prompt)))
 
 
-(displayln (question-llama-local "Mary is 30 and Harry is 25. Who is older?"))
-(displayln (completion-llama-local "Frank bought a new sports car. Frank drove"))
+;;(displayln (question-llama-local "Mary is 30 and Harry is 25. Who is older?"))
+;;(displayln (completion-llama-local "Frank bought a new sports car. Frank drove"))
