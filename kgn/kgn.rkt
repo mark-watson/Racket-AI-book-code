@@ -15,13 +15,6 @@
 (require nlp)
 (require "main.rkt")
 (require "dialog-utils.rkt")
-(require racket/runtime-path)
-
-(provide path-to-data)
-
-(define-runtime-path my-data-path "data")
-
-(define (path-to-data) my-data-path)
 
 (define count-substring 
   (compose length regexp-match*))
