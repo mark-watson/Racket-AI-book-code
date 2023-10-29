@@ -1,7 +1,6 @@
 #lang racket
 
 (require db)
-;;(require sqlite-table)
 (require llmapis)
 
 ; Function to convert list of floats to string representation
