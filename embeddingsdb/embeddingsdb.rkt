@@ -39,10 +39,13 @@
         (loop (+ start chunk-size)
               (cons (substring text start (min (+ start chunk-size) (string-length text))) chunks)))))
 
+(define (string-to-list str)
+  (map string->number (string-split str)))
+
 (define (decode-row row)
-  (let ((id (list-ref row 0))
-        (context (list-ref row 1))
-        (embedding (read (open-input-string (list-ref row 2)))))
+  (let ((id (vector-ref row 0))
+        (context (vector-ref row 1))
+        (embedding (string-to-list (read-line (open-input-string (vector-ref row 2))))))
     (list id context embedding)))
 
 (define db (sqlite3-connect #:database "test.db" #:mode 'create #:use-place #t))
@@ -70,7 +73,7 @@
 (define (all-documents)
   (map
    decode-row
-   (query-exec
+   (query-rows
     db
     "SELECT * FROM documents;")))
    
@@ -91,7 +94,6 @@
   (query-rows db query))
 
 (define (dot-product a b) ;; dot product of two lists of floating point numbers
-  (displayln "dot-product")
   (cond
     [(or (null? a) (null? b)) 0]
     [else
@@ -113,7 +115,7 @@
     (printf "~%semantic-search: ret=~a~%" ret)
     (let* ((context (string-join (reverse ret) " . "))
            (query-with-context (string-join (list context custom-context "Question:" query) " ")))
-      (question-openai query-with-context 40))))
+      (question-openai query-with-context))))
 
 (define (QA query [quiet #f])
   (let ((answer (semantic-match query "")))
