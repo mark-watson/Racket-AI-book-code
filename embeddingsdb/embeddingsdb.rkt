@@ -3,6 +3,8 @@
 (require db)
 (require llmapis)
 
+(provide create-document QA)
+
 ; Function to convert list of floats to string representation
 (define (floats->string floats)
   (string-join (map number->string floats) " "))
@@ -105,7 +107,7 @@
         (ret '()))
     (for-each
      (lambda (doc)
-       (let* ((context (second doc)) ;; ignore fpath for now
+       (let* ((context (second doc))
               (embedding (third doc))
               (score (dot-product emb embedding)))
          (when (> score cutoff)
