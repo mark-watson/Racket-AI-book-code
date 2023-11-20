@@ -41,5 +41,5 @@
    max-tokens))
 
 
-;; (displayln (question-anthropic "Mary is 30 and Harry is 25. Who is older?" 20))
+;; (displayln (question-anthropic "Mary is 30 and Harry is 25. Who is older?" 40))
 ;; (displayln (completion-anthropic "Frank bought a new sports car. Frank drove" 200))
