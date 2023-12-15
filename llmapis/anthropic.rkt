@@ -14,7 +14,8 @@
              prompt
              "\\n\\nAssistant: \", \"max_tokens_to_sample\": "
              (number->string  max-tokens)
-             ", \"model\": \"claude-instant-1\" }"))))
+             ", \"model\": \"claude-2.1\" }"))))
+;;             ", \"model\": \"claude-instant-1\" }"))))
          (zz (println prompt-data))
          (auth (lambda (uri headers params)
                  (values
@@ -59,3 +60,4 @@
 ;; (displayln (completion-anthropic "Frank bought a new sports car. Frank drove" 200))
 ;; (step-by-step-anthropic "KBS is an AI conpany specializing in NLP, and LLMS. Mark Watson is the president." "Write a KBS business plan." 600)
 
+(question-anthropic "Mary is 30 and Harry is 25. Who is older by how much? Be concise." 40)

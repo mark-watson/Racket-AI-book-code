@@ -35,3 +35,12 @@
 ;;(displayln (question-ollama-ai-local "Mary is 30 and Harry is 25. Who is older and by how much?"))
 ;;(displayln (completion-ollama-ai-local "Frank bought a new sports car. Frank drove"))
 ;;(displayln (question-ollama-ai-local "Try on Mac with llama 2 13b: Mary is 30, Bob is 25, and Susan is 32. Describe all combinations of the three people comparing their ages, including the calculation of age differences. Be concise."))
+
+;; EMBEDDINGS:
+
+#|
+curl http://localhost:11434/api/embeddings -d '{
+  "model": "mistral:7b-instruct",
+  "prompt": "Here is an article about llamas..."
+}'
+|#
