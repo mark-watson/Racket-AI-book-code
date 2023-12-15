@@ -38,9 +38,32 @@
 
 ;; EMBEDDINGS:
 
+(define (embeddings-ollama text)
+    (let* ((prompt-data
+            (string-join
+             (list
+              (string-append
+               "{\"prompt\": \"" text "\","
+               " \"model\": \"mistral\"}"))))
+           (p
+            (post
+             "http://localhost:11434/api/embeddings"
+             #:data prompt-data))
+           (r (response-json p)))
+      (hash-ref r 'embedding)))
+
+
+;; (embeddings-ollama "Here is an article about llamas...")
+
 #|
 curl http://localhost:11434/api/embeddings -d '{
   "model": "mistral:7b-instruct",
   "prompt": "Here is an article about llamas..."
 }'
+
+curl http://localhost:11434/api/embeddings -d '{
+  "model": "mistral",
+  "prompt": "Here is an article about llamas..."
+}'
+
 |#
