@@ -60,4 +60,4 @@
 ;; (displayln (completion-anthropic "Frank bought a new sports car. Frank drove" 200))
 ;; (step-by-step-anthropic "KBS is an AI conpany specializing in NLP, and LLMS. Mark Watson is the president." "Write a KBS business plan." 600)
 
-(question-anthropic "Mary is 30 and Harry is 25. Who is older by how much? Be concise." 40)
+;;(question-anthropic "Mary is 30 and Harry is 25. Who is older by how much? Be concise." 40)
