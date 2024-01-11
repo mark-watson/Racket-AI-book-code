@@ -2,7 +2,7 @@
 
 Using Racket Scheme for implementing many short AI examples including LLMs, vector datastore, NLP, semantic web and non-AI utilities.
 
-The book is curently about 60% done.
+Dear readers, I hope you enjoy these examples!
 
 Link to book on LeanPub:
 
