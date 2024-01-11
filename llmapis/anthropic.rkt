@@ -47,10 +47,10 @@
 (define (step-by-step-anthropic document prompt max-tokens) ;; work in progress
   (question-anthropic
    (string-append
- ;   "\n\nHuman: Answer the following question only if you know the answer or can make a well-informed guess; otherwise tell me you don't know it.\\n"
- ;   "\n\nHuman: When you reply, first find exact quotes in the FAQ relevant to the user's question and write them down word for word inside <thinking></thinking> XML tags.  This is a space for you to write down relevant content and will not be shown to the user.  Once you are done extracting relevant quotes, answer the question.  Put your answer to the user inside <answer></answer> XML tags.\\n"
- ;   "\n\nHuman: When answering my questions, please think things out step by step and break complex tasks into subtasks.\\n"
-   ; "\n\nPlease use this document text " document "\\n\\n"
+     "Human: Answer the following question only if you know the answer or can make a well-informed guess; otherwise tell me you don't know it.\\n"
+     "\\nHuman: When you reply, first find exact quotes in the FAQ relevant to the user's question and write them down word for word inside <thinking></thinking> XML tags.  This is a space for you to write down relevant content and will not be shown to the user.  Once you are done extracting relevant quotes, answer the question.  Put your answer to the user inside <answer></answer> XML tags.\\n"
+     "\\nHuman: When answering my questions, please think things out step by step and break complex tasks into subtasks.\\n"
+     "Please use this document text " document "\\n"
     "Please help with: "
     prompt)
    max-tokens))
@@ -58,6 +58,7 @@
 
 ;; (displayln (question-anthropic "Mary is 30 and Harry is 25. Who is older?" 40))
 ;; (displayln (completion-anthropic "Frank bought a new sports car. Frank drove" 200))
-;; (step-by-step-anthropic "KBS is an AI conpany specializing in NLP, and LLMS. Mark Watson is the president." "Write a KBS business plan." 600)
+;; (step-by-step-anthropic "KBS is an AI conpany specializing in NLP, and LLMS. We use Lisp languages and Python. We offer low prices. Mark Watson is the president." "Write an execuative summary for a KBS business plan." 600)
+;; (step-by-step-anthropic "MWA is an AI conpany specializing in NLP, and LLMS. We use Lisp languages and Python. Visit our web site https://markwatson.com" "Write an execuative summary for a KBS business plan." 600)
 
 ;;(question-anthropic "Mary is 30 and Harry is 25. Who is older by how much? Be concise." 40)
