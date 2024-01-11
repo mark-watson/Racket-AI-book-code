@@ -6,15 +6,17 @@
 
 (provide question-ollama-ai-local completion-ollama-ai-local)
 
-(define (helper prompt)
-  (let* ((prompt-data
+(define (helper prompt . model-name)
+  (let* ((model
+          (if (equal? model-name '()) "mistral" (first model-name)))
+         (prompt-data
           (string-join
            (list
             (string-append
              "{\"prompt\": \""
              prompt
-             "\", \"model\": \"mistral\", \"stream\": false}"))))
-         (ignore (displayln prompt-data))
+             "\", \"model\": \"" model "\", \"stream\": false}"))))
+         ;;(ignore (displayln prompt-data))
          (p
           (post
            "http://localhost:11434/api/generate"
@@ -22,10 +24,10 @@
          (r (response-json p)))
     (hash-ref r 'response)))
 
-(define (question-ollama-ai-local question)
+(define (question-ollama-ai-local question . model-name)
   (helper (string-append "Answer: " question)))
 
-(define (completion-ollama-ai-local prompt)
+(define (completion-ollama-ai-local prompt . model-name)
   (helper
    (string-append
     "Continue writing from the following text: "
@@ -33,8 +35,16 @@
 
 
 ;;(displayln (question-ollama-ai-local "Mary is 30 and Harry is 25. Who is older and by how much?"))
+;;(displayln (question-ollama-ai-local "Mary is 30 and Harry is 25. Who is older and by how much?" "mixtral:8x7b-instruct-v0.1-q2_K"))
 ;;(displayln (completion-ollama-ai-local "Frank bought a new sports car. Frank drove"))
-;;(displayln (question-ollama-ai-local "Try on Mac with llama 2 13b: Mary is 30, Bob is 25, and Susan is 32. Describe all combinations of the three people comparing their ages, including the calculation of age differences. Be concise."))
+;; The default mistral-7b model almost always gets the following wrong:
+;;(displayln (question-ollama-ai-local "Mary is 30, Bob is 25, and Susan is 32. Describe all combinations of the three people comparing their ages, including the calculation of age differences. Be concise."))
+;; Here we try the mixtral:8x7b-instruct-v0.1-q2_K model (2 bit quantization!) that sometimes gets the follwoing correct:
+;;(displayln (question-ollama-ai-local "Mary is 30, Bob is 25, and Susan is 32. Describe all combinations of the three people comparing their ages, including the calculation of age differences. Be concise."  "mixtral:8x7b-instruct-v0.1-q2_K"))
+;; Here we try the dolphin-mixtral:8x7b-v2.5-q3_K_S model (3 bit quantization!) that does better:
+;;(displayln (question-ollama-ai-local "Mary is 30, Bob is 25, and Susan is 32. Describe all combinations of the three people comparing their ages, including the calculation of age differences. Be concise."  "dolphin-mixtral:8x7b-v2.5-q3_K_S"))
+;; Here we try the Chineese yi:34b model:
+;;(displayln (question-ollama-ai-local "Mary is 30, Bob is 25, and Susan is 32. Describe all combinations of the three people comparing their ages, including the calculation of age differences. Be concise."  "yi:34b"))
 
 ;; EMBEDDINGS:
 
