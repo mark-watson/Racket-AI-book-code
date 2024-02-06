@@ -8,12 +8,9 @@
 (provide tavily-search)
 
 (define (json-helper query)
-  (string-join
-   (list
-    "{\"api_key\": \"" (getenv "TAVILY_API_KEY")"\", "
-    "\"query\": \"" query "\", "
-    "\"max_results\": 5}")
-   ""))
+  (format "{\"api_key\": \"~a\", \"query\": \"~a\", \"max_results\": 5}"
+          (getenv "TAVILY_API_KEY")
+          query))
 
 (define (filter-response a-hash-eq)
   (list
