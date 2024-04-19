@@ -7,8 +7,9 @@
 (provide question-ollama-ai-local completion-ollama-ai-local)
 
 (define (helper prompt . model-name)
+  (displayln (list "Model name: " model-name))
   (let* ((model
-          (if (equal? model-name '()) "mistral" (first model-name)))
+          (if (equal? model-name '()) "mistral" (first (first model-name))))
          (prompt-data
           (string-join
            (list
@@ -22,16 +23,18 @@
            "http://localhost:11434/api/generate"
            #:data prompt-data))
          (r (response-json p)))
+    ;;(displayln r)
     (hash-ref r 'response)))
 
 (define (question-ollama-ai-local question . model-name)
-  (helper (string-append "Answer: " question)))
+  (helper (string-append "Answer: " question) model-name))
 
 (define (completion-ollama-ai-local prompt . model-name)
   (helper
    (string-append
     "Continue writing from the following text: "
-    prompt)))
+    prompt)
+    model-name))
 
 
 ;;(displayln (question-ollama-ai-local "Mary is 30 and Harry is 25. Who is older and by how much?"))
@@ -45,6 +48,10 @@
 ;;(displayln (question-ollama-ai-local "Mary is 30, Bob is 25, and Susan is 32. Describe all combinations of the three people comparing their ages, including the calculation of age differences. Be concise."  "dolphin-mixtral:8x7b-v2.5-q3_K_S"))
 ;; Here we try the Chineese yi:34b model:
 ;;(displayln (question-ollama-ai-local "Mary is 30, Bob is 25, and Susan is 32. Describe all combinations of the three people comparing their ages, including the calculation of age differences. Be concise."  "yi:34b"))
+
+;; Meta's new llama3-instruct-8b model:
+
+;;(displayln (question-ollama-ai-local "Mary is 30 and Harry is 25. Who is older and by how much?" "llama3:instruct"))
 
 ;; EMBEDDINGS:
 
