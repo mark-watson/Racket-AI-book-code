@@ -2,19 +2,19 @@
 
 (require net/http-easy)
 (require racket/set)
- (require racket/pretty)
+(require pprint)
 
 (provide question-openai completion-openai embeddings-openai)
 
-(define (helper-openai prefix prompt)
+(define (question-openai prompt)
   (let* ((prompt-data
           (string-join
            (list
             (string-append
              "{\"messages\": [ {\"role\": \"user\","
-             " \"content\": \"" prefix ": "
+             " \"content\": \"Answer the question: "
              prompt
-             "\"}], \"model\": \"gpt-4o\"}"))))
+             "\"}], \"model\": \"gpt-3.5-turbo\"}"))))
          (auth (lambda (uri headers params)
                  (values
                   (hash-set*
@@ -32,18 +32,15 @@
            #:auth auth
            #:data prompt-data))
          (r (response-json p)))
-    ;;(pretty-print r)
     (hash-ref
      (hash-ref (first (hash-ref r 'choices)) 'message)
      'content)))
 
-
-(define (question-openai prompt)
-  (helper-openai "Answer the question: " prompt))
-
 (define (completion-openai prompt)
-  (helper-openai "Continue writing from the following text: "
-    prompt))
+  (question-openai
+   (string-append
+    "Continue writing from the following text: "
+    prompt)))
 
 (define (embeddings-openai text)
     (let* ((prompt-data
@@ -73,6 +70,6 @@
        (first (hash-ref r 'data))
        'embedding)))
 
-;;(displayln (question-openai "Mary is 30 and Harry is 25. Who is older?"))
-;;(displayln (completion-openai "Frank bought a new sports car. Frank drove"))
-;;(displayln (embeddings-openai "Frank bought a new sports car. Frank drove"))
+;; (displayln (question-openai "Mary is 30 and Harry is 25. Who is older?"))
+;; (displayln (completion-openai "Frank bought a new sports car. Frank drove"))
+;; (displayln (embeddings-openai "Frank bought a new sports car. Frank drove"))
