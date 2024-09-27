@@ -61,7 +61,6 @@
 ; Helper function to find the index of an element in a list, handling both strings and symbols
 (define (index-of lst elem)
   (let loop ([i 0] [l lst])
-    ;(display "index-of i") (display i) (display " l ") (displayln l)
     (cond
       [(null? l) #f] ; Base case: element not found
       [(equal? (car l) elem) i] ; Found at the beginning
@@ -74,8 +73,6 @@
 ; Function to execute a SPARQL-like query
 (define (execute-sparql-query query-string)
   (let-values ([(select-vars triple-pattern) (parse-sparql-query query-string)])
-    ;(display "select-vars ") (displayln select-vars)
-    ;(display "triple-pattern ") (displayln  triple-pattern)
     (let* ([s (if (string-prefix? (first triple-pattern) "?") '_ (string->symbol (first triple-pattern)))]
            [p (if (string-prefix? (second triple-pattern) "?") '_ (string->symbol (second triple-pattern)))]
            [o (if (string-prefix? (third triple-pattern) "?") '_ (string->symbol (third triple-pattern)))]
@@ -88,8 +85,6 @@
                          (filter (lambda (var) (string-prefix? var "?"))
                                  (cdr select-vars)))]
            )
-    ;(display "results ")  (displayln results)
-    ;(display "all-vars ") (displayln all-vars)
     (map (lambda (result)
            (map (lambda (var)
                   (let ([index (index-of triple-pattern var)])
