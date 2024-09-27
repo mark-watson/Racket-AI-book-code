@@ -1,5 +1,7 @@
 #lang racket
 
+;; Simple RDF. Copyright 2024 Mark Watson. All Rights Reserved. License: AGPLv3
+
 ; Define the datastore as a list of triples
 (define rdf-store '())
 
