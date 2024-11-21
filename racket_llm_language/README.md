@@ -6,3 +6,6 @@ Documentation: https://docs.racket-lang.org/llm/index.html
 
 GitHub: https://github.com/wilbowma/llm-lang
 
+## Install package
+
+    raco pkg install llm
