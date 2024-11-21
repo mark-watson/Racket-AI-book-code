@@ -58,7 +58,7 @@
 
 ;; (displayln (question-anthropic "Mary is 30 and Harry is 25. Who is older?" 40))
 ;; (displayln (completion-anthropic "Frank bought a new sports car. Frank drove" 200))
-;; (step-by-step-anthropic "KBS is an AI conpany specializing in NLP, and LLMS. We use Lisp languages and Python. We offer low prices. Mark Watson is the president." "Write an execuative summary for a KBS business plan." 600)
+;;(step-by-step-anthropic "KBS is an AI conpany specializing in NLP, and LLMS. We use Lisp languages and Python. We offer low prices. Mark Watson is the president." "Write an execuative summary for a KBS business plan." 600)
 ;; (step-by-step-anthropic "MWA is an AI conpany specializing in NLP, and LLMS. We use Lisp languages and Python. Visit our web site https://markwatson.com" "Write an execuative summary for a KBS business plan." 600)
 
 ;;(question-anthropic "Mary is 30 and Harry is 25. Who is older by how much? Be concise." 40)
