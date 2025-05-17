@@ -1,5 +1,11 @@
 # Example code for Mark Watson's book "Practical Artificial Intelligence Development With Racket"
 
+## This repo is obsolete, use source-code directory in:
+
+https://github.com/mark-watson/Racket-AI-book/tree/main
+
+## Notes
+
 Using Racket Scheme for implementing many short AI examples including LLMs, vector datastore, NLP, semantic web and non-AI utilities.
 
 Dear readers, I hope you enjoy these examples!
